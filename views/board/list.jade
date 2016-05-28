@@ -1,0 +1,42 @@
+//
+   Created by HOME on 2016-05-24.
+
+html
+head
+    title
+body
+
+
+   div
+       div
+           h1 Article
+           a(href='/board/write') 글쓰기
+
+           table
+               tr
+                   th 번호
+                   th 제목
+                   th 작성자
+                   th 날짜
+                   th 조회
+
+               - for(var i=0, len=data.length; i < len, item = data[i]; i++)
+                    tr
+                        td=max-i
+                        td=item.title
+                        td=item.id
+                        td=item.regdate
+                        td=item.hit
+
+
+
+
+
+
+
+
+
+
+
+
+
