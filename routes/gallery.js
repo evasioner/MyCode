@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET gallery page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Hughlee.net' });
+    res.render('gallery', { title: 'Gallery' });
 });
 
 module.exports = router;

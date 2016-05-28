@@ -5,10 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
-
 var routes = require('./routes/index');
+var gallery = require('./routes/gallery');
+var board = require('./routes/board');
 var users = require('./routes/users');
-
 var app = express();
 
 // view engine setup
@@ -24,6 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/gallery', gallery);
+app.use('/board', board);
 app.use('/users', users);
 
 
@@ -38,6 +40,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
 
 
 // error handlers
