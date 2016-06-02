@@ -3,7 +3,9 @@ body{
   padding:0;
   font-family: sans-serif;
 }
-
+.sidebar h3{
+  display: none;
+}
 header
 {
   font-size: 1.5em;
@@ -19,7 +21,7 @@ nav ul div{
   text-align: left;
   font-size: 1em;
 }
-nav ul{
+.sidebar{
   background-color: #040404;
   overflow:hidden;
   color:white;
@@ -29,21 +31,32 @@ nav ul{
 
 }
 
-nav ul li{
+.sidebar li{
   display:inline-block;
   padding:20px;
 }
 
-nav ul li:hover{
+.sidebar li:hover{
   background-color : #5CD1E5;
 }
 
-section{
+.subnav {
+  display :block;
+}
+
+.content img{
+  display: none;
+}
+.content p{
   line-height: 1.5em;
   font-size:0.9em;
   padding:40px;
   width:75%;
   margin:0 auto;
+}
+
+section{
+
 }
 .handle{
   width:100%;
@@ -61,50 +74,52 @@ section{
     display: none;
   }
 
-  nav{
+  body{
+    background: #000;
+  }
+
+  .sidebar{
     position: absolute;
     width: 100px;
     height: 100%;
     background: #333;
     color: #fff;
-    outline: 1px solid #2a2a2a;
+    /*outline: 0px solid #2a2a2a;*/
   }
-  nav ul{
+  .sidebar ul{
     /*//max-height: 0;
     background-color: #5CD1E5;*/
     list-style: none;
     padding:0;
     margin:0;
   }
-  nav ul div{
-    /*text-align: left;
-    display:none;*/
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    background:#2a2a2a;
-  }
-  nav ul li{
-    outline: 1px solid #2a2a2a;
+
+  .sidebar li{
+    /*outline: 1px solid #2a2a2a;*/
     transition: all 0.3s;
+    height: 20px;
+
     /*box-sizing: border-box;
     width:100%;
     padding:15px;
     text-align: left;*/
     /*display:none;*/
   }
-
-  nav ul li:hover{
+  .sidebar h3{
+    display: block;
+    text-align: center;
+  }
+  .sidebar li:hover{
     background: #444;
     border-left: 5px solid #eee;
   }
 
-  .showing{
+  /*.showing{
     max-height: 20em;
     display:block;
-  }
+  }*/
 
-  a{
+  .sidebar a{
     display: block;
     color:#fff;
     text-decoration: none;
@@ -116,13 +131,20 @@ section{
     height:100%;
     position:absolute;
     background: #eee;
+    padding:20px;
+    transition: all 0.3s;
   }
   .content img{
+    display: block;
     width:30px;
     height:30px;
   }
-  .abir{
 
+  .menu-bar{
+    cursor:pointer;
+  }
+  .mopen{
+    transform: translateX(250px);
   }
   .handle{
     display:block;
