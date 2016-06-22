@@ -1,3 +1,28 @@
 //
    Created by HOME on 2016-06-13.
+doctype html
+html
+    head
+        link(rel='stylesheet' type='text/css' href='/stylesheets/timeline.css')
+        script(src='/javascripts/modernizr.custom.js')
+    body
+        div
+            div(id='cbp-so-scroller' class='cbp-so-scroller')
+                section.cbp-so-section
+                    article(class='cbp-so-side cbp-so-side-left')
+                        h2 hello
+                        p 최용수 감독은 최근 엄청난 자본력을 앞세워 세계적인 선수들과 지도자가 유입되고 있는 중국 프로축구에서 새로운 도전을 기대하고 있다.
+                    figure(class='cbp-so-side cbp-so-side-right')
+                        img(src='/images/1.png')
+                section.cbp-so-section
+                    figure(class='cbp-so-side cbp-so-side-left')
+                        img(src='/images/1.png')
+                    article(class='cbp-so-side cbp-so-side-right')
+                        h2 hello it's me im in califonia
+                        p 최용수 감독은 최근 엄청난 자본력을 앞세워 세계적인 선수들과 지도자가 유입되고 있는 중국 프로축구에서 새로운 도전을 기대하고 있다.
+        script(src='/javascripts/cbpScroller.js')
+        script(src='/javascripts/ScrollerClass.js')
+        script.
+            new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+
 

@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var gallery = require('./routes/gallery');
 var board = require('./routes/board');
 var users = require('./routes/users');
+var timeline = require('./routes/timeline');
 var app = express();
 
 // view engine setup
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/gallery', gallery);
 app.use('/board', board);
+app.use('/timeline', timeline);
 app.use('/users', users);
 
 
