@@ -1,19 +1,22 @@
 //
    Created by HOME on 2016-05-24.
 
+doctype  html
+html
+    head
+    body
 
-
-form(action='/board/write' method='post')
-    table
-        tr
-            th
-            td
-                input(type='text' name='title')
-        tr
-            th
-            td
-                textarea(name='content')
-        tr
-            td
-                input(type='submit')
-                input(type='reset')
+        form(action='/board/write' method='post')
+            table
+                tr
+                    th
+                    td
+                        input(type='text' name='title')
+                tr
+                    th
+                    td
+                        textarea(name='content')
+                tr
+                    td
+                        input(type='submit') 작성
+                        input(type='reset')

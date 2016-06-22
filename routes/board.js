@@ -26,7 +26,7 @@ router.post('/write', function (req, res, next) {
     var board = new BoardModel({
         "title": title,
         "content": content,
-        "id": 'session'
+        "id": 'Master'
     });
 
     board.save(function (err, doc) {

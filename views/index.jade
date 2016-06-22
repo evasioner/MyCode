@@ -2,42 +2,42 @@ extends layout
 
 block content
 
-  header hughlee.net
-  div.handle HLnet
-  nav
+  header
+    h1 hughlee.net
 
-    ul.sidebar
-      h3 Menu
-
-      li Home
-        a(href='#')
-      ul.subnav
-        li - List
+    nav
+      ul.menu-bar
+        li
+          a(href='/')
+            span(data-hover='HOME') HOME
+        li
           a(href='#')
-      li About
-        a(href='#')
-      li Article
-        a(href='/board')
-      li Gallery
-        a(href='/gallery')
-      li Smart
-        a(href='#')
-      li Contact
-        a(href='#')
+            span(data-hover='About') About
+        li
+          a(href='/board' target='content')
+            span(data-hover='Article') Article
+        li
+          a(href='/gallery' target='content')
+            span(data-hover='Gallery') Gallery
+        li
+          a(href='#')
+            span(data-hover='Contact') Contact
+    image(src='images/icon_menu.png' height='50px' width=height='50px').mbutton
 
 
-  div(class='content')
-    img(src='/images/icon_menu.png' class='menu-bar')
-    p Unsurprisingly, David de Gea was the overwhelming pick in goal. De Gea was chosen by more than 171,000 users (95.6%). The message to Mourinho is clear - do what needs to be done to persuade the Spaniard to stay.The defence takes shapefit Luke Shaw is the left-back of choice. Shaw, out injured since September, was picked in 80% of teams - the highest proportion of any outfield player.Joining Shaw in defence would be Chris Smalling, who was selected by 76.5% of 'managers' - at the time of analysing the data that was 136,000 teams.However, you think Daley Blind should not be at centre-back. Blind started 55 games in all competitions last season - the joint most along with Smalling, with the majority coming at centre-back. With Smalling, he formed the league's joint best defence, judged by goals conceded.But fans were not convinced - less than one in 10 of you (9.79%) chose him as a centre-back in a back four.Two players stood out as being the fans' pick to partner Smalling - Everton's John Stones (69,000), a Mourinho target while at Chelsea, and France's Raphael Varane (81,000), who Mourinho signed in 2011 while Real Madrid manager.At right-back, Matteo Darmian was the most-picked player but still only made 35.3% of teams.Youngster Timothy Fosu-Mensah was the second most-popular right-back (19.9% of teams) despite only having started two Premier League games.Antonio Valencia, who started the FA Cup final, was picked in that position by just 11.1% of users.Midfield - Rooney over RonaldoAs with the England selectors, Wayne Rooney was mostly picked in a midfield role. He was selected there by 99,100 users, almost 33,000 more than any other player.While Rooney's selections were spread across multiple midfield positions - including central in a 4-4-2 and in a support role in a 4-2-3-1 - Antony Martial's 66,400 midfield selections were mostly in one of the three support roles in a 4-2-3-1 formation, or on the left of a 4-4-2.Real Madrid duo Gareth Bale and Cristiano Ronaldo were selected a combined 88,600 times - Bale accounting for the majority (55,300).
+  section
+    iframe(name='content')
 
-  script.
+
+
+  //script.
     /*$('.handle').on('click',function() {
      $('nav ul li').toggleClass('showing');
-     });*/
+     });
 
     $('.menu-bar').on('click', function () {
       $('.content').toggleClass('mopen');
-    });
+    });*/
 
 
 

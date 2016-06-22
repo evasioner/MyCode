@@ -1,32 +1,65 @@
 //
    Created by HOME on 2016-05-24.
-
+doctype html
 html
 head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/article.css')
+    script(src='/javascripts/modernizr.custom.js')
+
+    script(src='/javascripts/jquery-1.11.3.min.js')
     title
 body
+    div.container
+
+        a(href='/board/list') 뒤로가기
+        div(id='TheSidebar' class='sidebar')
+            button(class='close-button fa fa-fw fa-close')
+            div
+        div(id='theGrid' class='main')
+          section.grid
+            header.top-bar
+               h2.top-bar__headline Latest Articles
+               div.write
+                    a(href='/board/write') 글 작성
+               div.filter
+                   span Filter by:
+                   span.dropdown Popular
 
 
-   div
-       div
-           h1 Article
-           a(href='/board/write') 글쓰기
 
-           table
-               tr
-                   th 번호
-                   th 제목
-                   th 작성자
-                   th 날짜
-                   th 조회
+            - for(var i=0, len=data.length; i < len, item = data[i]; i++)
+                a(class='grid__item' href='#')
+                    h2(class='title title-preview')=item.title
+                    div.loader
+                    span.category=item.id
+                    div(class='meta meta--preview')
+                        img.meta__avatar(src='/images/judy.jpg' alt='HughLee')
+                        span.meta__date=new Date(item.regdate).toDateString()
+                        span.meta__reading-time=item.hit
+            footer.page-meta
+                span Loard More...
+          section.content
+            div.scroll-wrap
+                - for(var i=0, len=data.length; i < len, item = data[i]; i++)
+                    article.content__item
+                        span(class='category category--full') Football
+                        h2(class='title title--full')=item.title
+                        div(class='meta meta--full')
+                            img.meta__avatar(src='/images/judy.jpg' alt='HughLee')
+                            span.meta__author=item.id
+                            span.meta__date=new Date(item.regdate).toDateString()
+                                i(class='fa fa-clock-o')
+                            span.meta__reading-time=item.hit
+                        p=item.content
+            button.close-button
+                i(class='fa fa-close')
+                    span Close
+    script(src='/javascripts/main.js')
+    script(src='/javascripts/classie.js')
 
-               - for(var i=0, len=data.length; i < len, item = data[i]; i++)
-                    tr
-                        td=max-i
-                        td=item.title
-                        td=item.id
-                        td=item.regdate
-                        td=item.hit
+
+
 
 
 
