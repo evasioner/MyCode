@@ -1,23 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700italic);
 * { padding: 0; margin: 0; }
-body { background: #fff; font-family: 'Lato', sans-serif; text-transform: uppercase; letter-spacing: 1px; overflow:hidden;}
+/*body { background: #fff; font-family: 'Lato', sans-serif; text-transform: uppercase; letter-spacing: 1px; overflow:hidden;}*/
 
 
-header{
-  height:6em;
+.navgation{
+  height:10em;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow:hidden;
   width:100%;
-  padding: 2em 5%;
+  margin: 0 auto;
+  padding: 2.875em 1.875em 1.875em;
   text-align: justify;
   position: fixed;
   background: #2c3e50;
   color:#fff;
+  z-index:1000;
 }
 
-header::after {
+.navgation::after {
   content: '';
   display: inline-block;
   width: 100%;
-
 }
 
 .menu-bar{
@@ -27,12 +32,12 @@ header::after {
   text-align: center;
 
 }
-header > div
+.navgation > div
 {
   height: 100%;
 }
 
-header  h1{
+.navgation  h1{
   font-size: 3em;
   font-style: italic;
 }
@@ -150,7 +155,7 @@ iframe{
     display: block;
   }
 
-  header h1{
+  .navgation h1{
     font-size: 1.5em;
   }
 

@@ -1,8 +1,3 @@
-body{
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-}
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:400italic,700,900|Raleway:500|Martel+Sans:400,700);
 @font-face {
     font-weight: normal;
@@ -11,21 +6,11 @@ body{
     src: url("../fonts/codropsicons/codropsicons.eot");
     src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"), url("../fonts/codropsicons/codropsicons.woff") format("woff"), url("../fonts/codropsicons/codropsicons.ttf") format("truetype"), url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
 }
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
-.clearfix:before, .clearfix:after {
-    display: table;
-    content: '';
-}
+.articleSection:before{ content: " "; display: table; }
+.articleSection:before{clear:both;}
 
-.clearfix:after {
-    clear: both;
-}
-
-body {
+.articleSection {
     background: #fff;
     color: #7b7b7b;
     font-weight: 400;
@@ -35,7 +20,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
     overflow-y: scroll;
-    /* force scroll to appear */
+    /* force scroll to appear*/
 }
 
 /* helper class when showing content */
@@ -43,14 +28,14 @@ body {
     overflow: hidden;
 }
 
-a {
+.top-bar a {
     outline: none;
     color: #81c483;
     text-decoration: none;
 }
 
-a:hover,
-a:focus {
+.top-bar a:hover,
+.top-bar a:focus {
     color: #333;
     outline: none;
 }
@@ -63,7 +48,7 @@ button:focus {
 .sidebar {
     text-align: center;
     background: #f5f5f5;
-    z-index: 1000;
+    z-index: 80;
     position: fixed;
     width: 300px;
     max-width: 100%;
@@ -185,6 +170,7 @@ button:focus {
 
 /* Grid container */
 .grid {
+    margin-top:10em;
     position: relative;
 }
 
@@ -312,6 +298,8 @@ button:focus {
     background: #fff;
     min-height: 300px;
     cursor: pointer;
+    text-decoration: none;
+    outline: none;
     text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
